@@ -1,0 +1,97 @@
+*{
+  box-sizing: border-box;
+}
+@media print{
+    *{
+        margin: 0;
+        text-align: left;
+        font-size: 14px;
+    }
+    header h1{
+        text-align: center;
+        font-size: 25px;
+    }
+    #mybtn, footer, header p, textarea, head title{
+    display: none;
+    }
+    #double, form label{
+        display: block !important;
+        padding: 0;
+    }
+    form label{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    font-weight: bold;
+    }
+}
+
+body{
+    font-family: "Roboto", serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+header, section, footer{
+    text-align: center;
+}
+header, section{
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 70px auto;
+}
+
+header h1{
+    margin-bottom: 70px;
+}
+header{
+    color: #000000ee;
+}
+footer{
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
+}
+form input, textarea, #mybtn{
+    width: 100%;
+    margin-bottom:4px;
+    box-sizing: border-box;
+    padding: 8px 16px 8px 16px;
+    border-radius: 4px;
+    border: 1px #ffffffaa solid;
+}
+form input{
+    background: transparent;
+    height: 40px;
+    font-size: 15px;
+}
+form input::placeholder{
+    color: #ffffffaa
+}
+textarea::placeholder{
+    color: #ffffffaa;
+}
+textarea{
+    background: transparent;
+    resize: none;
+    font-family: "Roboto", serif;
+    font-size: 15px;
+    height: 150px;
+}
+section form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    background-color: rgb(0, 183, 255);
+    padding: 16px 64px;
+    align-items: center;
+    border-radius: 6px;
+}
+form button{
+    font-weight: bold;
+    font-size: 14px;
+}
+#double, form label{
+    display: none;
+}
