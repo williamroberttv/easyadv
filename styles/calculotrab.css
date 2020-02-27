@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #f9f9f9 ;
+    height: 100vh;
+    font-size: 1.2rem;
+}
+body, ul, li, p{
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    list-style: none;  
+}
+.header{
+    background: rgb(0, 183, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+header p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+footer{
+    text-align: center;
+    padding: 16px;
+    margin-top: auto;
+    border: 1px solid #eee;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,39 @@
     <link href="/advFacil/styles/form.css" rel="stylesheet">
     <title>AdvFácil</title>
 </head>
+
 <body>
-    <header>
-        <h1>Formulário de Petição</h1>
-        <p>Ao preencher os dados abaixo será gerado um arquivo em PDF contendo um formulário inicial para desenvolvimento de sua petição.</p>
+    <header class="header">
+        <a href="standard.html">
+            <p>AdvFácil</p>
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>Sobre</li>
+                <li>Configurações</li>
+                <a href="standard.html">
+                    <li>Voltar</li>
+                </a>
+                <a href="index.html">
+                    <li>Sair</li>
+                </a>
+            </ul>
+        </nav>
+        
     </header>
+    <div class="top">
+        <h1>Formulário de Petição</h1>
+        <p>Ao preencher os dados abaixo será gerado um arquivo em PDF contendo um formulário inicial para
+            desenvolvimento de sua petição.</p>
+    </div>
     <section class="formulario-section">
         <form class="forumulario-form" action="#" method="">
             <label for="name">Nome Completo:</label>
-            <input id="name" type="text" name="nome" class="formulario-form-text" placeholder="Nome Completo" autocomplete="off">
+            <input id="name" type="text" name="nome" class="formulario-form-text" placeholder="Nome Completo"
+                autocomplete="off">
             <label for="cpf">CPF/CNPJ:</label>
-            <input type="text" id="cpf" class="formulario-form-text" placeholder="CPF/CNPJ" autocomplete="off" minlength="9" maxlength="14" onblur="formatarCampo(this);" onfocus="retirarFormatacao(this);">
+            <input type="text" id="cpf" class="formulario-form-text" placeholder="CPF/CNPJ" autocomplete="off"
+                minlength="9" maxlength="14" onblur="formatarCampo(this);" onfocus="retirarFormatacao(this);">
             <label for="rg">RG:</label>
             <input type="rg" class="formulario-form-text" placeholder="RG" autocomplete="off">
             <label for="email">Email:</label>
@@ -36,7 +59,8 @@
         </form>
     </section>
     <div id="double"></div>
-    <footer>All rights reserveds.</footer>
+    <footer>All rights reserveds.<br>2020</br></footer>
     <script src="/advFacil/scripts/script-form.js"></script>
 </body>
+
 </html>

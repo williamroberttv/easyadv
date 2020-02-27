@@ -1,4 +1,6 @@
 *{
+    margin: 0px;
+    padding: 0px;
   box-sizing: border-box;
 }
 @media print{
@@ -7,11 +9,11 @@
         text-align: left;
         font-size: 14px;
     }
-    header h1{
+    .top h1{
         text-align: center;
         font-size: 25px;
     }
-    #mybtn, footer, header p, textarea, head title{
+    #mybtn, footer, .top p, textarea, head title{
     display: none;
     }
     #double, form label{
@@ -32,21 +34,51 @@ body{
     background-color: #f9f9f9;
     height: 100vh;
 }
-
-header, section, footer{
+.header{
+    background: rgb(0, 183, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+header p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu{
+    display: flex;
+}
+ul{
+    list-style: none;
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.top, section, footer{
     text-align: center;
 }
-header, section{
+.top, section{
     width: 90%;
     max-width: 700px;
     margin: 0 auto 70px auto;
 }
 
-header h1{
+.top{
+    margin-top: 50px;
     margin-bottom: 70px;
-}
-header{
     color: #000000ee;
+}
+.top p{
+    margin-top: 50px;
 }
 footer{
     margin-top: auto;

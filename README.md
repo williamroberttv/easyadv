@@ -1,8 +1,10 @@
 # advFácil
+
 Projeto para treinar javascript/css/html automatizando tarefas da advocacia
 
 
 Objetivos
+
 1# Adicionar Formulário de Petição com gerador de pdf
 
 2# Calculadora de débitos trabalhistas
