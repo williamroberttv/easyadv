@@ -32,3 +32,23 @@ function mascaraCpf(valor) {
 function mascaraCnpj(valor) {
     return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
 }
+
+//mascara cep
+
+let campoCep = document.getElementById("CEP").value;
+
+function formatarCep(campoCep){
+    if (campoCep.value.length = 8){
+        campoCep.value = mascaraCep(campoCep.value)
+    }
+};
+
+function retirarFormatacaoCep(campoCep){
+    campoCep.value = campoCep.value.replace(/(\.|\/|\-)/g,"")
+};
+
+function mascaraCep(valor){
+    return valor.replace(/(\d{2})(\d{3})(\d{3})/g,"\$1.\$2\-\$3");
+};
+
+

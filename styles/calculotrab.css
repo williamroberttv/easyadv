@@ -6,10 +6,8 @@
 body{
     background: #f9f9f9 ;
     height: 100vh;
-    font-size: 1.2rem;
 }
 body, ul, li, p{
-    font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
     list-style: none;  
 }
@@ -44,4 +42,22 @@ footer{
     padding: 16px;
     margin-top: auto;
     border: 1px solid #eee;
+}
+
+.tab{
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.tab button:hover {
+    background-color: #ddd;
 }

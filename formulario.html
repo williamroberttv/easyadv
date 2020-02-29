@@ -48,7 +48,7 @@
             <label for="endereco">Endereço:</label>
             <input type="text" id="endereco" class="formulario-form-text" placeholder="Endereço" autocomplete="off">
             <label for="cep">CEP:</label>
-            <input type="text" class="formulario-form-text" placeholder="CEP" autocomplete="off" onkeypress="">
+            <input type="text" id="CEP" class="formulario-form-text" placeholder="CEP" autocomplete="off" onblur="formatarCep(this);" onfocus="retirarFormatacaoCep(this);" maxlength="10" minlength="8">
             <label for="profissao">Profissão:</label>
             <input type="text" id="profissao" class="formulario-form-text" placeholder="Profissão" autocomplete="off">
             <label for="estado">Estado Civil:</label>
