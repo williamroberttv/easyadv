@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button {
+  margin-top: 10px;
+  width: 300px;
+  height: 48px;
+}
+input {
+  font-size: 18px;
+}
+button {
+  background-color: #e23145;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+footer {
+  text-align: center;
+  margin-top: auto;
+}
