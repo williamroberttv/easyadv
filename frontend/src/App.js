@@ -1,15 +1,9 @@
 import React from "react";
 import "./index.css";
-import Login from "./pages/Login";
-import Footer from "./components/footer";
+import Routes from "./Routes/routes";
 
 function App() {
-  return (
-    <div>
-      <Login />
-      <Footer />
-    </div>
-  );
+  return <Routes />;
 }
 
 export default App;

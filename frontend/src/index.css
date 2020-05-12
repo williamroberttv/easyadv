@@ -3,14 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: "Roboto", sans-serif;
 }
+html {
+  font-size: 62.5%;
+}
+html,
 body {
-  width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body {
+  font-size: 1.6rem;
+}
 input,
 button {
   margin-top: 10px;
@@ -18,15 +24,53 @@ button {
   height: 48px;
 }
 input {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 button {
-  background-color: #e23145;
+  background-color: #d0cde1;
   border: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 footer {
   text-align: center;
   margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  max-width: 980px;
+  height: 2.5rem;
+  font-weight: bold;
+}
+span {
+  color: #6c63ff;
+}
+.socials {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d0cde1;
+  height: 60px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar li {
+  font-weight: bold;
+  margin-right: 20px;
 }

@@ -1,0 +1,30 @@
+.cadastro {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+.cadastro-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cadastro-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cadastro-container input {
+  border: none;
+  border-bottom: 1px solid #d0cde1;
+  transition: ease-in-out 200ms;
+}
+.cadastro input:focus {
+  border-bottom: 2px solid #6c63ff;
+}
+.cadastro-container p {
+  margin-top: 10px;
+  text-align: left;
+}

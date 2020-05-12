@@ -1,25 +1,40 @@
 import React from "react";
-import "./index.css";
+import { Link } from "react-router-dom";
+import "./style.css";
 import logo from "../../assets/logo.png";
+import Footer from "../../components/footer";
+import Socials from "../../components/socials";
 
 function Login() {
   return (
-    <div className="login">
-      <div className="logo-container">
-        <h1>EasyADV</h1>
+    <div className="home">
+      <div className="main">
+        <h1>
+          <span>Easy</span>ADV
+        </h1>
+        <h3>Seu escritório online.</h3>
         <p>
-          Seu escritório online. Agenda, cálculos, formulários e consulta em um
-          só lugar.
+          Sua agenda, cálculos advocatícios, formulários e consultas em um só
+          lugar.
         </p>
-        <img src={logo} alt="logo" />
       </div>
       <div className="login-container">
-        <form>
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Senha" />
-          <button>Login</button>
-        </form>
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+        <div className="login">
+          <form>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Senha" />
+            <button>Login</button>
+          </form>
+          <p>
+            <Link to="/cadastro">Não tenho cadastro</Link>
+          </p>
+        </div>
       </div>
+      <Socials />
+      <Footer />
     </div>
   );
 }
