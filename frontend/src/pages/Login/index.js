@@ -1,11 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./style.css";
 import logo from "../../assets/logo.png";
 import Footer from "../../components/footer";
 import Socials from "../../components/socials";
 
+import api from "../services/api";
+
 function Login() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const history = useHistory();
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    try {
+      const response = await api.post("session", { email, senha });
+
+      localStorage.setItem("user_name", response.data.nome);
+      history.push("/perfil");
+    } catch (err) {
+      alert("Erro no login, tente novamente.");
+    }
+  }
   return (
     <div className="home">
       <div className="main">
@@ -23,10 +41,20 @@ function Login() {
           <img src={logo} alt="logo" />
         </div>
         <div className="login">
-          <form>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <button>Login</button>
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+            <button type="submit">Login</button>
           </form>
           <p>
             <Link to="/cadastro">Não tenho cadastro</Link>

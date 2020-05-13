@@ -1,22 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import Socials from "../../components/socials";
 import Footer from "../../components/footer";
 import "./style.css";
 import Navbar from "../../components/navbar";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
+import api from "../services/api";
 
 function Cadastro() {
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const history = useHistory();
+
+  async function handleRegister(e) {
+    e.preventDefault();
+    const data = {
+      nome,
+      sobrenome,
+      email,
+      senha,
+    };
+    try {
+      await api.post("cadastro", data);
+      alert("Usuário cadastrado com sucesso!");
+      history.push("/");
+    } catch (err) {
+      alert("Erro ao cadastrar, tente novamente.");
+    }
+  }
+
   return (
     <div className="cadastro">
       <Navbar />
       <div className="cadastro-container">
-        <form>
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Sobrenome" />
-          <input type="date" placeholder="Data de nascimento" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Senha" />
-          <button>Cadastrar</button>
+        <form onSubmit={handleRegister}>
+          <input
+            type="text"
+            placeholder="Nome"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Sobrenome"
+            value={sobrenome}
+            onChange={(e) => setSobrenome(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+          <button type="submit">Cadastrar</button>
         </form>
         <p>
           <Link to="/">Já tenho cadastro</Link>
