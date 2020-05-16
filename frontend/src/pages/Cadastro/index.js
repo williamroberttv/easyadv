@@ -28,6 +28,7 @@ function Cadastro() {
       alert("Usuário cadastrado com sucesso!");
       history.push("/");
     } catch (err) {
+      console.log(err);
       alert("Erro ao cadastrar, tente novamente.");
     }
   }
@@ -36,36 +37,42 @@ function Cadastro() {
     <div className="cadastro">
       <Navbar />
       <div className="cadastro-container">
-        <form onSubmit={handleRegister}>
-          <input
-            type="text"
-            placeholder="Nome"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Sobrenome"
-            value={sobrenome}
-            onChange={(e) => setSobrenome(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
-          <button type="submit">Cadastrar</button>
-        </form>
-        <p>
-          <Link to="/">Já tenho cadastro</Link>
-        </p>
+        <div className="text">
+          <h2>Vamos começar</h2>
+          <p>Faça seu cadastro ao lado</p>
+        </div>
+        <div className="form-submission">
+          <form onSubmit={handleRegister}>
+            <input
+              type="text"
+              placeholder="Nome"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Sobrenome"
+              value={sobrenome}
+              onChange={(e) => setSobrenome(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+            <button type="submit">Cadastrar</button>
+            <p>
+              <Link to="/">Já tenho cadastro</Link>
+            </p>
+          </form>
+        </div>
       </div>
       <Socials />
       <Footer />

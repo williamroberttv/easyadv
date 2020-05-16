@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { FiLogOut } from "react-icons/fi";
+import { NavLink, useHistory } from "react-router-dom";
 
 function Navbar() {
+  const history = useHistory();
+  const userName = localStorage.getItem("user_name");
+  function handleLogout() {
+    localStorage.clear();
+    history.push("/");
+  }
   return (
     <header className="navbar">
       <h1>
@@ -9,11 +16,20 @@ function Navbar() {
       </h1>
       <nav>
         <ul>
+          <li>Bem Vindo(a) {userName}</li>
           <li>
-            <Link to="/">Início</Link>
+            <NavLink to="/">Início</NavLink>
           </li>
           <li>
-            <Link>Sobre</Link>
+            <NavLink to="/perfil">Sobre</NavLink>
+          </li>
+          <li>
+            <FiLogOut
+              onClick={handleLogout}
+              size={22}
+              color={"#6c63ff"}
+              cursor={"pointer"}
+            />
           </li>
         </ul>
       </nav>

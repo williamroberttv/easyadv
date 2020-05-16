@@ -1,0 +1,16 @@
+.home {
+  align-items: center;
+  justify-content: center;
+}
+.home-section {
+  margin-top: 150px;
+  width: 90%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.home-section section {
+  background-color: aliceblue;
+  height: 250px;
+}

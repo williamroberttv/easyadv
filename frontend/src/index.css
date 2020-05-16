@@ -74,8 +74,17 @@ a {
 }
 .navbar ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbar li {
   font-weight: bold;
   margin-right: 20px;
+  display: flex;
+}
+.navbar ul li:first-child {
+  text-transform: uppercase;
+  margin-right: 40px;
+  font-size: 18px;
+  font-weight: 700;
 }

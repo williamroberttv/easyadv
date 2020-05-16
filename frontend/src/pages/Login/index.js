@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./style.css";
 import logo from "../../assets/logo.png";
@@ -8,6 +8,7 @@ import Socials from "../../components/socials";
 import api from "../services/api";
 
 function Login() {
+  const userName = localStorage.getItem("user_name");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -24,6 +25,14 @@ function Login() {
       alert("Erro no login, tente novamente.");
     }
   }
+  function handleRedirect() {
+    if (userName) {
+      history.push("/perfil");
+    }
+  }
+  useEffect(() => {
+    handleRedirect();
+  });
   return (
     <div className="home">
       <div className="main">
