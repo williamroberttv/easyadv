@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .home {
+    background: url("../../assets/logo.svg") no-repeat center 330px;
+    background-size: 60%;
+  }
+}
+@media (max-width: 602px) {
+  .home {
+    background: url("../../assets/logo.svg") no-repeat center 350px;
+    background-size: 60%;
+  }
+}

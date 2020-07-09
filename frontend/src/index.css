@@ -10,32 +10,25 @@ html {
 }
 html,
 body {
-  /* height: 100vh; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 body {
   font-size: 1.6rem;
 }
-input,
-button {
-  margin-top: 10px;
-  width: 300px;
-  height: 48px;
-}
 input {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 button {
-  background-color: #d0cde1;
+  background-color: #6c63ff;
   border: none;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
-  transition: ease 200ms;
+  transition: ease 300ms;
 }
 button:hover {
-  opacity: 0.8;
+  background-color: #625afc;
 }
 footer {
   text-align: center;
@@ -46,9 +39,6 @@ footer {
   max-width: 980px;
   height: 2.5rem;
   font-weight: bold;
-}
-span {
-  color: #6c63ff;
 }
 .socials {
   display: grid;

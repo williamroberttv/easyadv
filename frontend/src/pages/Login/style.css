@@ -1,12 +1,12 @@
 .home {
-  width: 90%;
-  max-width: 980px;
-  margin: auto;
+  height: 100vh;
+  background: url("../../assets/logo.svg") no-repeat center 230px;
+  background-size: 50%;
 }
 .main {
   width: 90%;
   max-width: 980px;
-  margin: 50px;
+  margin: auto;
 }
 .main h1,
 .main h3,
@@ -18,39 +18,41 @@
   font-size: 4.2rem;
   font-weight: bold;
 }
+.main h1 span {
+  color: #6c63ff;
+}
 .login-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 90%;
-  max-width: 980px;
-  margin: auto;
-}
-.logo {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-.logo img {
-  width: 500px;
-}
-.login form {
+.login-container form {
   display: flex;
   flex-direction: column;
 }
-.login input {
-  border: none;
-  border-bottom: 1px solid #d0cde1;
+.login-container form input {
+  border: 1px solid #dadae0;
+  border-radius: 6px;
   transition: ease-in-out 200ms;
-}
-.login input:focus {
-  border-bottom: 2px solid #6c63ff;
-}
-.login button {
-  margin-top: 30px;
-}
-.login p {
-  text-align: center;
   margin-top: 10px;
+  width: 250px;
+  height: 42px;
+}
+.login-container form input::placeholder {
+  padding: 10px;
+}
+.login-container form input:focus {
+  border: 1px solid #6c63ff;
+}
+.login-container form button {
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  width: 250px;
+  height: 42px;
+}
+.login-container a {
+  font-weight: bold;
 }

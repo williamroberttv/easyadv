@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./style.css";
-import logo from "../../assets/logo.png";
-import Footer from "../../components/footer";
-import Socials from "../../components/socials";
+import "./responsivity.css";
 
-import api from "../services/api";
+import api from "../../services/api";
 
 function Login() {
   const userName = localStorage.getItem("user_name");
@@ -46,32 +44,26 @@ function Login() {
         </p>
       </div>
       <div className="login-container">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="login">
-          <form onSubmit={handleLogin}>
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-            />
-            <button type="submit">Login</button>
-          </form>
-          <p>
-            <Link to="/cadastro">Não tenho cadastro</Link>
-          </p>
-        </div>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+
+        <Link to="/cadastro">
+          <p>Não tenho cadastro</p>
+        </Link>
       </div>
-      <Socials />
-      <Footer />
     </div>
   );
 }
